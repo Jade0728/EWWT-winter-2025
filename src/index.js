@@ -3,7 +3,7 @@ const app = express()
 const path = require("path")
 const hbs = require("hbs")
 const collection = require("./mongodb")
-
+ 
 const tempelatePath = path.join(__dirname, '../tempelates')
 
 app.use(express.json())

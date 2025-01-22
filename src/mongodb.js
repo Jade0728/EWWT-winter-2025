@@ -8,7 +8,7 @@ mongoose.connect("mongodb://localhost:27017/LoginSignUpTutorial")
         console.log("fail to connect");
     }
 )
-
+ 
 const LoginSchema = new mongoose.Schema({
     id: {
         type: String,
