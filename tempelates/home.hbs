@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/home.css" />
+
 </head>
 <body>
-    <h2>[nickname]의 공간</h2>
-    <form action="/delete" method="POST">
-        <input type="hidden" name="id" value="{{id}}">
-        <input type="hidden" name="password" value="{{password}}">
-        <button type="submit">회원탈퇴</button>
-    </form>
-    <a href="/" method="post">로그아웃</a>
+    <div class="home-top">
+        <img class="home-picture" src="../MBGR.png" alt="login picture" />
+
+        <form action="/delete" method="POST">
+            <input type="hidden" name="id" value="{{id}}">
+            <input type="hidden" name="password" value="{{password}}">
+            <button class="out" type="submit">회원탈퇴</a>
+        </form>
+        <a class="logout" href="/" method="post">로그아웃</a>
+    </div>
 </body>
 </html>

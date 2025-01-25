@@ -1,0 +1,32 @@
+ body {
+    background-color: black;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.home-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 세로 방향으로 가운데 정렬 */
+    align-items: center;
+    /* 가로 방향으로 가운데 정렬 */
+}
+
+.home-picture {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.out{
+    background-color:black;
+    color:white;
+    border:none;
+
+}
+.logout{
+    text-decoration: none;
+    color:white;
+}
+
+

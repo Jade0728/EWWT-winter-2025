@@ -3,43 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css" />
 </head>
 <body>
-    
-    <h2>Login</h2>
-    <form action="/login" method="post">
-    <divclass="form">
-        <input  type="text" name="id" placeholder="id를 입력해주세요">
-    </divclass=>
-    <div class="form">
-        <input type="password" name="password" placeholder="pw를 입력해주세요">
-        </div>
-    <div class="form">
-        <input type="submit" placeholder="LOGIN">
-    </div>
-    </form>
+    <div class="login-top">
+        <img class="login-picture" src="../MBGR.png" alt="login picture" />
+        <form action="/login" method="post">
+            <div>
+                <input class="login-form" type="text" name="id" placeholder="id를 입력해주세요">
+            </div>
+            <div >
+                <input class="login-form" type="password" name="password" placeholder="pw를 입력해주세요">
+                </div>
+            <div >
+                <input class="login-button" type="submit" value="LOGIN">
+            </div>
+        </form>
+        <a class="signup" href="/signup">회원가입 하러가기 
+        </a>
+        <script>
+            async function login() {
+                const response = await fetch("/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        id: document.getElementById("id").value,
+                        password: document.getElementById("password").value
+                    })
+                });
 
-    <a href="/signup">회원가입 하러가기</a>
-    <script>
-        async function login() {
-            const response = await fetch("/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    id: document.getElementById("id").value,
-                    password: document.getElementById("password").value
-                })
-            });
+                const data = await response.json();
 
-            const data = await response.json();
-
-            if (data.message) {
-                alert(data.message.value);  // 서버에서 받은 메시지를 alert로 표시
+                if (data.message) {
+                    alert(data.message.value);  // 서버에서 받은 메시지를 alert로 표시
+                }
             }
-        }
-    </script>
+        </script>
+    </div>
 </body>
 </html>

@@ -4,13 +4,17 @@ const path = require("path")
 const hbs = require("hbs")
 const collection = require("./mongodb")
  
-const tempelatePath = path.join(__dirname, '../tempelates')
+const tempelatePath = path.join(__dirname, '../tempelates');
+const publicPath = path.join(__dirname, '../public');
+const picturePath = path.join(__dirname, '../picture');
+app.use(express.json());
+app.use(express.static(publicPath));
+app.use(express.static(picturePath));
+app.set('view engine', "hbs");
+app.set('views', tempelatePath);
+app.use(express.urlencoded({ extended: false }));
 
-app.use(express.json())
-app.set('view engine', "hbs")
-app.set('views', tempelatePath)
-app.use(express.urlencoded({extended:false}))
-    
+
 app.get("/", (req, res) => {
     res.render("login")
 })

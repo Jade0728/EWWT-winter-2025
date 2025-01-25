@@ -1,0 +1,47 @@
+ body {
+    background-color: black;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.signup-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+   
+
+.signup-picture {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.signup-form-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 세로 방향으로 가운데 정렬 */
+    align-items: center;
+    /* 가로 방향으로 가운데 정렬 */
+}
+.signup-form {
+    background-color: aquamarine;
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: smaller;
+}
+.signup-button{
+    background-color: aqua;
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    margin-left:10px;
+    margin-bottom: 10px;
+    border: none;
+
+}
+
