@@ -7,5 +7,11 @@
 </head>
 <body>
     <h2>[nickname]의 공간</h2>
+    <form action="/delete" method="POST">
+        <input type="hidden" name="id" value="{{id}}">
+        <input type="hidden" name="password" value="{{password}}">
+        <button type="submit">회원탈퇴</button>
+    </form>
+    <a href="/" method="post">로그아웃</a>
 </body>
 </html>
