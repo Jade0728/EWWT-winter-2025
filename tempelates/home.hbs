@@ -11,12 +11,39 @@
     <div class="home-top">
         <img class="home-picture" src="../MBGR.png" alt="login picture" />
 
-        <form action="/delete" method="POST">
-            <input type="hidden" name="id" value="{{id}}">
-            <input type="hidden" name="password" value="{{password}}">
-            <button class="out" type="submit">회원탈퇴</a>
+        <form class="home-form" action="/delete" method="POST">
+            <input type="hidden" name="id" value="{{id}}"/>
+            <input type="hidden" name="password" value="{{password}}"/>
+            <button class="out" type="submit">회원탈퇴</button>
         </form>
-        <a class="logout" href="/" method="post">로그아웃</a>
+        <a class="logout" href="/login" method="post">로그아웃</a>
+    </div>
+
+    <div class="group-container">
+        <h2>+ 그룹 추가</h2>
+        <form action="/add-group" method="POST">
+            <label>그룹명:</label>
+            <input type="text" name="groupName" required />
+            <br />
+            <label>그룹 소개:</label>
+            <input type="text" name="groupDescription" />
+            <br />
+            <label>그룹 색상:</label>
+            <input type="color" name="groupColor" value="#ff00ff" />
+            <br />
+            <button type="submit">그룹 추가하기</button>
+        </form>
+    
+        <div class="group-list">
+            <h3>그룹 목록</h3>
+        <ul>
+            {{#each groups}}
+            <li>{{this.name}}</li>
+            {{/each}}
+        </ul>
+
+
+        </div>
     </div>
 </body>
 </html>
