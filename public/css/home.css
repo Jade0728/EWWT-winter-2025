@@ -12,7 +12,6 @@
     align-items: center;
     /* 가로 방향으로 가운데 정렬 */
 }
-
 .home-picture {
     width: 150px;
     height: 150px;
@@ -22,11 +21,25 @@
     background-color:black;
     color:white;
     border:none;
-
 }
 .logout{
     text-decoration: none;
     color:white;
 }
+.group-container {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
 
+.group-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.group-list li {
+    margin: 5px 0;
+    font-weight: bold;
+}
 

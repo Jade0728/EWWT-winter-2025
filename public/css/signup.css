@@ -10,8 +10,12 @@
     justify-content: center;
     align-items: center;
 }
-   
-
+.signup-form-top > input{
+    padding-left:5px;
+}
+.signup-form-top > input:focus{
+    outline: none;
+}
 .signup-picture {
     width: 150px;
     height: 150px;
